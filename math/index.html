@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="index.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.0.0/math.js"></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Maths</title>
+  </head>
+  <body>
+    <div id="calculation">
+      <div id="GCD">
+        <h2>GCD</h2>
+        <!-- GCD -->
+        <input
+          type="number"
+          pattern="\d*"
+          name="gcd1"
+          id="gcd1"
+          class="text-box"
+        />
+        <input
+          type="number"
+          pattern="\d*"
+          name="gcd2"
+          id="gcd2"
+          class="text-box"
+        />
+        <input
+          type="number"
+          pattern="\d*"
+          name="gcd3"
+          id="gcd3"
+          class="text-box"
+        />
+        <button id="gcd-button" onclick="gcdcalc()" class="btn">
+          Calculate gcd
+        </button>
+        <label id="gcdans" class="ans"> &nbsp </label>
+        <!-- /GCD -->
+      </div>
+      <!-- LCM  -->
+
+      <div id="LCM">
+        <h2>LCM</h2>
+        <input
+          type="number"
+          pattern="\d*"
+          name="lcm1"
+          id="lcm1"
+          class="text-box"
+        />
+        <input
+          type="number"
+          pattern="\d*"
+          name="lcm2"
+          id="lcm2"
+          class="text-box"
+        />
+        <input
+          type="number"
+          pattern="\d*"
+          name="lcm3"
+          id="lcm3"
+          class="text-box"
+        />
+        <button id="lcm-button" onclick="lcmcalc()" class="btn">
+          Calculate lcm
+        </button>
+        <label id="lcmlabel" class="ans"> &nbsp</label>
+      </div>
+      <!-- prime -->
+      <div id="prime">
+        <h2>No of Prime</h2>
+        <input
+          type="number"
+          pattern="\d*"
+          name="prime1"
+          id="prime1"
+          class="text-box"
+        />
+        <input type="text pattern="\d*"" name="prime2" id="prime2"
+        class="text-box" />
+        <button id="prime-button" onclick="primecalc()" class="btn">
+          Calculate No of Prime Numbers
+        </button>
+        <label id="primelabel" class="ans">&nbsp</label>
+      </div>
+      <div id="phi">
+        <h2>PHI</h2>
+        <input
+          type="number"
+          pattern="\d*"
+          name="phi1"
+          id="phi1"
+          class="text-box"
+        />
+        <button id="phi-button" onclick="phi()" class="btn">
+          Calculate phi
+        </button>
+        <label id="philabel" class="ans">&nbsp</label>
+      </div>
+      <div id="factorial">
+        <h2>Factorial</h2>
+        <input
+          type="number"
+          pattern="\d*"
+          name="fact"
+          id="fact"
+          class="text-box"
+        />
+        <button id="fact-button" onclick="fact()" class="btn">
+          Calculate factorial
+        </button>
+        <label id="factlabel" class="ans">&nbsp;</label>
+      </div>
+    </div>
+  </body>
+</html>
