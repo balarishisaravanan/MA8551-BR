@@ -1,29 +1,30 @@
 console.log("The JS file has been loaded!");
 function lcmcalc() {
-  let var1 = document.querySelector("#lcm1").value;
-  let var2 = document.querySelector("#lcm2").value;
-  let var3 = document.querySelector("#lcm3").value;
+  const [var1, var2, var3] = ["lcm1", "lcm2", "lcm3"].map(
+    (id) => document.getElementById(id).value
+  );
   if (var3 == 0) lcmans = math.lcm(var1, var2);
   else lcmans = math.lcm(var1, var2, var3);
-  // console.log("lcm is " + lcmans);
+
   $("#lcmlabel").text(lcmans);
 }
 
 function gcdcalc() {
-  let var1 = document.querySelector("#gcd1").value;
-  let var2 = document.querySelector("#gcd2").value;
-  let var3 = document.querySelector("#gcd3").value;
   let gcdans = document.querySelector("#gcdlabel");
+  const [var1, var2, var3] = ["gcd1", "gcd2", "gcd3"].map(
+    (id) => document.getElementById(id).value
+  );
 
   if (var3 === null) gcdans = math.gcd(var1, var2);
   else gcdans = math.gcd(var1, var2, var3);
-  // console.log("gcd is" + gcdans);
+
   $("#gcdlabel").text(gcdans);
 }
 
 function primecalc() {
-  let prime1 = document.querySelector("#prime1").value;
-  let prime2 = document.querySelector("#prime2").value;
+  const [prime1, prime2] = ["prime1", "prime2"].map(
+    (id) => document.getElementById(id).value
+  );
 
   const isPrime = (num) => {
     let count = 2;
@@ -46,7 +47,7 @@ function primecalc() {
     return count;
   };
   primeans = primeBetween(prime1, prime2);
-  // console.log(primeans);
+
   $("#primelabel").text(primeans);
 }
 function phi() {
@@ -72,21 +73,7 @@ function phi() {
 
 function fact() {
   let num = document.querySelector("#fact").value;
-  // var answer = 1;
-  // for (let i = num; i >= 1; i--) {
-  //   answer *= i;
-  // }
+
   var result = math.factorial(num);
   $("#factlabel").text(result);
 }
-
-// factt();
-
-// function fact() {
-//   let num = document.querySelector("#fact");
-//   if (num == 0) {
-//     console.log(1);
-//   }
-//   let result = num * fact(num - 1);
-//   console.log(result);
-// }
