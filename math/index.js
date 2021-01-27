@@ -56,8 +56,6 @@ function phi() {
     if (a === 0) {
       return b;
     }
-
-    return gcd(b % a, a);
   }
 
   var result = 1;
@@ -89,10 +87,37 @@ function qandr() {
   $("#r_qandr").text("Remainder  is" + remainder);
 }
 
-function trailingzeroes(n) {
-  let count = 0;
+function trailingzeroes() {
+  var count = 0;
+  var n = document.querySelector("#trailing").value;
   for (let i = 5; n / i >= 1; i *= 5) {
     count += n / i;
   }
   console.log(count);
+  $("#trailing_ans").text(count);
+}
+function exponentdivision() {
+  const [number, exponent, divisor] = [
+    "number_ed",
+    "exponent_ed",
+    "divisor_ed",
+  ].map((id) => document.getElementById(id).value);
+  let remainder = number % divisor;
+  let flag = 1;
+  while (remainder != 1) {
+    flag += 1;
+    remainder = (remainder * number) % divisor;
+  }
+  let p1 = exponent % flag;
+  remainder = number ** p1 % divisor;
+  console.log(remainder);
+  $("#ans_ed").text(remainder);
+}
+
+function modinverse() {
+  let a = document.querySelector("#firstmodulo").value;
+  let m = document.querySelector("#secondmodulo").value;
+  a = a % m;
+
+  for (let x = 1; x < m; x++) if ((a * x) % m == 1) $("#invmoduloans").text(x);
 }
