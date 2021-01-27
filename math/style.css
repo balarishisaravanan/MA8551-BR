@@ -48,3 +48,17 @@ h2 {
   padding: 2px;
   overflow: hidden;
 }
+
+/* body section {
+  display: block;
+  border-bottom: Red solid;
+  border-top: Red solid;
+} */
+
+body section:first-child {
+  border-top: none;
+}
+
+section:last-of-type {
+  border-bottom: none;
+}

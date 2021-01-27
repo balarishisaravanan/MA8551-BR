@@ -14,9 +14,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.0.0/math.js"></script>
     <link rel="stylesheet" href="style.css" />
 
-    <script src="script/Bignumber.min.js"> </script>
-    <script src="http://peterolson.github.com/BigInteger.js/BigInteger.min.js"></script>
-    <script src="./script/decimal.js"></script>
+   
 
     <title>Maths</title>
   </head>
@@ -25,7 +23,7 @@
     <section id="unit3">
     <div id="calculation">
       <div id="GCD">
-        <h2>gcd</h2>
+        <h2>GCD</h2>
         <!-- GCD -->
         <input
           type="number"
@@ -139,8 +137,16 @@
           <label class="ans" id="q_qandr">&nbsp;</label>
           <label class="ans" id="r_qandr">&nbsp;</label>
         </div>
-        <div id="trailingzeroes">
+        <div id="trailingzero">
           <h2>Trailing Zeroes</h2>
+          <input type="number"
+          pattern="\d*"
+          name="trailing"
+          id="trailing"
+          class="text-box"
+          />
+          <button class="btn" type="submit" onclick="trailingzeroes()">Calculate trailing zeroes</button>
+          <label id="trailing_ans"class="ans">&nbsp;</label>
         </div>
     </section>
     <!-- Unit3 Ends here -->
@@ -169,8 +175,27 @@
         class="text-box"
         placeholder="divisor"
         />
+        <label class="ans" id="ans_ed">&nbsp;</label>
         <button type="Submit" class="btn" onclick="exponentdivision()"> Calculate remainder</button>
 
+      </div>
+      <div id="invmodulo">
+        <input type="number"
+        pattern="\d*"
+        name="firstmodulo"
+        id="firstmodulo"
+        class="text-box"
+        
+        />
+        <input type="number"
+        pattern="\d*"
+        name="secondmodulo"
+        id="secondmodulo"
+        class="text-box"
+        
+        />
+        <button type="submit" onclick="modinverse();" class="btn">calculate inverse modulo</button>
+        <label class="ans" id="invmoduloans">&nbsp;</label>
       </div>
 
     </section>

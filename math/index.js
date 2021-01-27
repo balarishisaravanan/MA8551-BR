@@ -56,8 +56,6 @@ function phi() {
     if (a === 0) {
       return b;
     }
-
-    return gcd(b % a, a);
   }
 
   var result = 1;
@@ -90,11 +88,13 @@ function qandr() {
 }
 
 function trailingzeroes() {
-  let count = 0;
+  var count = 0;
+  var n = document.querySelector("#trailing").value;
   for (let i = 5; n / i >= 1; i *= 5) {
     count += n / i;
   }
   console.log(count);
+  $("#trailing_ans").text(count);
 }
 function exponentdivision() {
   const [number, exponent, divisor] = [
@@ -102,31 +102,22 @@ function exponentdivision() {
     "exponent_ed",
     "divisor_ed",
   ].map((id) => document.getElementById(id).value);
-  var lol = new BigNumber();
-  lol = Math.pow(number, exponent);
-  var lmao = Decimal(lol);
-  lmao %= divisor;
-  console.log(lmao);
+  let remainder = number % divisor;
+  let flag = 1;
+  while (remainder != 1) {
+    flag += 1;
+    remainder = (remainder * number) % divisor;
+  }
+  let p1 = exponent % flag;
+  remainder = number ** p1 % divisor;
+  console.log(remainder);
+  $("#ans_ed").text(remainder);
 }
 
-function summa() {
-  var x = 3;
-  var y = 247;
-  var z = 25;
+function modinverse() {
+  let a = document.querySelector("#firstmodulo").value;
+  let m = document.querySelector("#secondmodulo").value;
+  a = a % m;
 
-  let bignumm = BigNumber(String(x ** y));
-  console.log(bignumm.toFixed() % z);
+  for (let x = 1; x < m; x++) if ((a * x) % m == 1) $("#invmoduloans").text(x);
 }
-
-// summa();
-// var x = 2;
-// var y = 300;
-// let bignumm = new BigNumber(x ** y);
-// let correctans = BigNumber.toFixed();
-// console.log(correctans);
-
-// var something = new BigNumber(
-//   "1111222233334444555566666666666666666666666666666666666666666666666666666666666666666666666667"
-// );
-// console.log(something.toFixed());
-// console.log("this is notation from", something.toString());
