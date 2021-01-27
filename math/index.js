@@ -74,6 +74,25 @@ function phi() {
 function fact() {
   let num = document.querySelector("#fact").value;
 
-  var result = math.factorial(num);
+  let result = math.factorial(num);
   $("#factlabel").text(result);
+}
+
+// find the quotient and remainder
+function qandr() {
+  const [dividend, divisor] = ["dividend", "divisor"].map(
+    (id) => document.getElementById(id).value
+  );
+  let remainder = dividend % divisor;
+  let quotient = dividend / divisor;
+  $("#q_qandr").text("Quotient is " + quotient);
+  $("#r_qandr").text("Remainder  is" + remainder);
+}
+
+function trailingzeroes(n) {
+  let count = 0;
+  for (let i = 5; n / i >= 1; i *= 5) {
+    count += n / i;
+  }
+  console.log(count);
 }

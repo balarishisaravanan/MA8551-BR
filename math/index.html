@@ -123,6 +123,30 @@
         </button>
         <label id="factlabel" class="ans">&nbsp;</label>
       </div>
+      <div id="findremainder">
+        <h2>Quotient and Remainder</h2>
+        <input
+          type="number"
+          pattern="\d*"
+          name="dividend"
+          id="dividend"
+          class="text-box"
+          placeholder="dividend"
+        />
+        <input
+          type="number"
+          pattern="\d*"
+          name="divisor"
+          id="divisor"
+          class="text-box"
+          placeholder="divisor"
+        />
+        <button type="submit" onclick="qandr();" class="btn">
+          Calculate Q and R
+        </button>
+        <label class="ans" id="q_qandr">&nbsp;</label>
+        <label class="ans" id="r_qandr">&nbsp;</label>
+      </div>
     </div>
   </body>
 </html>
