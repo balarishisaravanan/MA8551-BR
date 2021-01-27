@@ -89,10 +89,44 @@ function qandr() {
   $("#r_qandr").text("Remainder  is" + remainder);
 }
 
-function trailingzeroes(n) {
+function trailingzeroes() {
   let count = 0;
   for (let i = 5; n / i >= 1; i *= 5) {
     count += n / i;
   }
   console.log(count);
 }
+function exponentdivision() {
+  const [number, exponent, divisor] = [
+    "number_ed",
+    "exponent_ed",
+    "divisor_ed",
+  ].map((id) => document.getElementById(id).value);
+  var lol = new BigNumber();
+  lol = Math.pow(number, exponent);
+  var lmao = Decimal(lol);
+  lmao %= divisor;
+  console.log(lmao);
+}
+
+function summa() {
+  var x = 3;
+  var y = 247;
+  var z = 25;
+
+  let bignumm = BigNumber(String(x ** y));
+  console.log(bignumm.toFixed() % z);
+}
+
+// summa();
+// var x = 2;
+// var y = 300;
+// let bignumm = new BigNumber(x ** y);
+// let correctans = BigNumber.toFixed();
+// console.log(correctans);
+
+// var something = new BigNumber(
+//   "1111222233334444555566666666666666666666666666666666666666666666666666666666666666666666666667"
+// );
+// console.log(something.toFixed());
+// console.log("this is notation from", something.toString());

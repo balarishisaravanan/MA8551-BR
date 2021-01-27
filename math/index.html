@@ -14,9 +14,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.0.0/math.js"></script>
     <link rel="stylesheet" href="style.css" />
 
+    <script src="script/Bignumber.min.js"> </script>
+    <script src="http://peterolson.github.com/BigInteger.js/BigInteger.min.js"></script>
+    <script src="./script/decimal.js"></script>
+
     <title>Maths</title>
   </head>
   <body>
+    <!-- Unit3 Starts here -->
+    <section id="unit3">
     <div id="calculation">
       <div id="GCD">
         <h2>gcd</h2>
@@ -95,6 +101,83 @@
         </button>
         <label id="primelabel" class="ans">&nbsp</label>
       </div>
+      <div id="factorial">
+        <h2>Factorial</h2>
+        <input
+        type="number"
+        pattern="\d*"
+        name="fact"
+        id="fact"
+        class="text-box"
+        />
+        <button id="fact-button" onclick="fact()" class="btn">
+          Calculate factorial
+        </button>
+        <label id="factlabel" class="ans">&nbsp;</label>
+      </div>
+      <div id="findremainder">
+        <h2>Quotient and Remainder</h2>
+        <input
+        type="number"
+        pattern="\d*"
+        name="dividend"
+            id="dividend"
+            class="text-box"
+            placeholder="dividend"
+          />
+          <input
+            type="number"
+            pattern="\d*"
+            name="divisor"
+            id="divisor"
+            class="text-box"
+            placeholder="divisor"
+          />
+          <button type="submit" onclick="qandr();" class="btn">
+            Calculate Q and R
+          </button>
+          <label class="ans" id="q_qandr">&nbsp;</label>
+          <label class="ans" id="r_qandr">&nbsp;</label>
+        </div>
+        <div id="trailingzeroes">
+          <h2>Trailing Zeroes</h2>
+        </div>
+    </section>
+    <!-- Unit3 Ends here -->
+    <!-- Unit4 Starts here -->
+    <section id="unit4">
+      <div id="exponentdivision">
+        <h2> Factorial Division</h2>
+        <input type="number"
+        pattern="\d*"
+        name="number_ed"
+        id="number_ed"
+        class="text-box"
+        placeholder="base"
+        />
+        <input type="number"
+        pattern="\d*"
+        name="exponent_ed"
+        id="exponent_ed"
+        class="text-box"
+        placeholder="exponent"
+        />
+        <input type="number"
+        pattern="\d*"
+        name="divisor_ed"
+        id="divisor_ed"
+        class="text-box"
+        placeholder="divisor"
+        />
+        <button type="Submit" class="btn" onclick="exponentdivision()"> Calculate remainder</button>
+
+      </div>
+
+    </section>
+
+    <!-- Unit4 Ends here -->
+    <!-- Unit5 Starts here -->
+    <section id="unit5">
       <div id="phi">
         <h2>PHI</h2>
         <input
@@ -109,44 +192,8 @@
         </button>
         <label id="philabel" class="ans">&nbsp</label>
       </div>
-      <div id="factorial">
-        <h2>Factorial</h2>
-        <input
-          type="number"
-          pattern="\d*"
-          name="fact"
-          id="fact"
-          class="text-box"
-        />
-        <button id="fact-button" onclick="fact()" class="btn">
-          Calculate factorial
-        </button>
-        <label id="factlabel" class="ans">&nbsp;</label>
-      </div>
-      <div id="findremainder">
-        <h2>Quotient and Remainder</h2>
-        <input
-          type="number"
-          pattern="\d*"
-          name="dividend"
-          id="dividend"
-          class="text-box"
-          placeholder="dividend"
-        />
-        <input
-          type="number"
-          pattern="\d*"
-          name="divisor"
-          id="divisor"
-          class="text-box"
-          placeholder="divisor"
-        />
-        <button type="submit" onclick="qandr();" class="btn">
-          Calculate Q and R
-        </button>
-        <label class="ans" id="q_qandr">&nbsp;</label>
-        <label class="ans" id="r_qandr">&nbsp;</label>
-      </div>
+    </section>
+    <!-- Unit5 Ends here -->
     </div>
   </body>
 </html>
