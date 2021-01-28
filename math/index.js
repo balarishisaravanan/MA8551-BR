@@ -121,3 +121,14 @@ function modinverse() {
 
   for (let x = 1; x < m; x++) if ((a * x) % m == 1) $("#invmoduloans").text(x);
 }
+
+function tau() {
+  let num = document.querySelector("#tau1").value;
+  let count = 0;
+  for (let i = 1; i <= num; i++) {
+    if (num % i == 0) {
+      count++;
+    }
+  }
+  $("#taulabel").text(count);
+}
