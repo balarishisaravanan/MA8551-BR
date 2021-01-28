@@ -132,3 +132,14 @@ function tau() {
   }
   $("#taulabel").text(count);
 }
+
+function sigma() {
+  let num = document.querySelector("#sigma1").value;
+  let ans = 0;
+  for (let i = 1; i <= num; i++) {
+    if (num % i == 0) {
+      ans += i;
+    }
+  }
+  $("#sigmalabel").text(ans);
+}
