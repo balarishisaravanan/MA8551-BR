@@ -49,12 +49,6 @@ h2 {
   overflow: hidden;
 }
 
-body section {
-  display: block;
-  border-bottom: Red solid;
-  border-top: Red solid;
-}
-
 body section:first-child {
   border-top: none;
 }
