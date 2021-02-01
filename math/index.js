@@ -56,6 +56,8 @@ function phi() {
     if (a === 0) {
       return b;
     }
+
+    return gcd(b % a, a);
   }
 
   var result = 1;
