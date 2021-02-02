@@ -90,13 +90,13 @@ function qandr() {
 }
 
 function trailingzeroes() {
-  var count = 0;
+  var zeroes = 0;
   var n = document.querySelector("#trailing").value;
   for (let i = 5; n / i >= 1; i *= 5) {
-    count += n / i;
+    zeroes += n / i;
   }
-  console.log(count);
-  $("#trailing_ans").text(count);
+  // console.log(zeroes);
+  $("#trailing_ans").text(zeroes + " approx");
 }
 function exponentdivision() {
   const [number, exponent, divisor] = [
