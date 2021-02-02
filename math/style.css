@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
 }
 
 body {
@@ -37,8 +38,7 @@ h2 {
 }
 
 .btn,
-.btn:active,
-.btn:focus {
+.btn:active {
   width: 100%;
   height: 2rem;
   border-radius: 10px;
@@ -47,6 +47,7 @@ h2 {
   font: 1.5rem bolder;
   padding: 2px;
   overflow: hidden;
+  font-family: "Open Sans", sans-serif;
 }
 
 body section:first-child {
@@ -62,4 +63,7 @@ section:last-of-type {
 }
 hr {
   color: maroon;
+}
+.btn:hover {
+  background-color: maroon;
 }
