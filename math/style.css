@@ -19,15 +19,18 @@ body {
 .text-box {
   width: 100%;
   height: 2rem;
-  background-color: #777;
+  background-color: black;
   color: #fff;
-  font: 2rem bolder;
+  font: 1rem lighter;
   margin: 0.3rem 0px;
   overflow: auto;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
 }
 
 h2 {
   text-align: center;
+  color: rgb(213, 71, 78);
 }
 
 .ans {
@@ -37,7 +40,7 @@ h2 {
   font-size: 3rem;
 }
 
-.btn,
+/* .btn,
 .btn:active {
   width: 100%;
   height: 2rem;
@@ -48,7 +51,7 @@ h2 {
   padding: 2px;
   overflow: hidden;
   font-family: "Open Sans", sans-serif;
-}
+} */
 
 body section:first-child {
   border-top: none;
@@ -64,6 +67,85 @@ section:last-of-type {
 hr {
   color: maroon;
 }
-.btn:hover {
+/* .btn:hover {
   background-color: maroon;
+} */
+.hbtn {
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+  overflow: hidden;
+  padding: 8px 20px;
+  margin: 0px 3px 6px;
+  text-align: center;
+  border: 2px solid rgb(213, 71, 78);
+  text-decoration: none;
+  color: white;
+  white-space: nowrap;
+  z-index: 0;
+  width: 100%;
+}
+
+.hbtn i {
+  padding-right: 8px;
+}
+
+.hb-fill-middle2::before {
+  position: absolute;
+  content: "";
+  background: white none repeat scroll 0% 0%;
+  transition-duration: 0.3s;
+  z-index: -1;
+  inset: 0px 0px auto auto;
+  width: 0px;
+  height: 100%;
+  opacity: 1;
+  border: white;
+}
+
+.hb-fill-middle2:hover::before {
+  width: 50%;
+  height: 100%;
+  opacity: 1;
+}
+
+.hb-fill-middle2 {
+  background: transparent none repeat scroll 0% 0%;
+  color: white;
+  transition: color 0.3s ease 0s, background 0s ease 0s;
+}
+
+.hb-fill-middle2:hover {
+  color: maroon;
+  background: white none repeat scroll 0% 0%;
+  transition: color 0.3s ease 0s, background 0s ease 0.3s;
+  border: white;
+}
+
+.hb-fill-middle2::after {
+  position: absolute;
+  content: "";
+  background: white none repeat scroll 0% 0%;
+  transition-duration: 0.3s;
+  z-index: -1;
+  inset: 0px auto auto 0px;
+  width: 0px;
+  height: 100%;
+  opacity: 1;
+}
+
+.hb-fill-middle2:hover::after {
+  width: 50%;
+}
+/* to hide arrows */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }
