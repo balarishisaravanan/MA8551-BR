@@ -145,3 +145,13 @@ function sigma() {
   }
   $("#sigmalabel").text(ans);
 }
+function divcheck() {
+  console.log("div check has loaded");
+  let n = document.querySelector("#divisible").value;
+  let checkers = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+  let ans = [];
+  for (let i = 0; i < checkers.length; i++) {
+    if (n % checkers[i] == 0) ans.push(checkers[i]);
+  }
+  $("#divisibility").text("Divisible by " + ans);
+}

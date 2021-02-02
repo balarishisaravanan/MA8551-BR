@@ -111,6 +111,7 @@
         name="fact"
         id="fact"
         class="text-box"
+        
         />
         <button id="fact-button" onclick="fact()" class="hbtn hb-fill-middle2">
           Calculate factorial
@@ -205,7 +206,18 @@
         <button type="submit" onclick="modinverse();" class="hbtn hb-fill-middle2">calculate inverse modulo</button>
         <label class="ans" id="invmoduloans">&nbsp;</label>
       </div>
-
+      <div class="divcheck">
+        <h2> Divisibility Check</h2>
+        <input type="number"
+        pattern="\d*"
+        name="divisible"
+        id="divisible"
+        class="text-box"
+        
+        />
+        <button type="submit" onclick="divcheck();" class="hbtn hb-fill-middle2">Check Divisibility</button>
+        <label id="divisibility" class="ans">&nbsp;</label>
+      </div>
     </section>
     <hr>
 
