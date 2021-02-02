@@ -85,8 +85,8 @@ function qandr() {
   );
   let remainder = dividend % divisor;
   let quotient = dividend / divisor;
-  $("#q_qandr").text("Quotient is " + quotient);
-  $("#r_qandr").text("Remainder  is" + remainder);
+  $("#q_qandr").text("Quotient: " + quotient + " Remainder: " + remainder);
+  // $("#r_qandr").text("Remainder  is" + remainder);
 }
 
 function trailingzeroes() {
