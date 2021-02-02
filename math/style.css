@@ -56,3 +56,10 @@ body section:first-child {
 section:last-of-type {
   border-bottom: none;
 }
+.unit {
+  font-weight: lighter;
+  text-decoration: underline;
+}
+hr {
+  color: maroon;
+}
