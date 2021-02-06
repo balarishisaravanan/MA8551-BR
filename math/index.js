@@ -47,6 +47,7 @@ function primecalc() {
     return count;
   };
   primeans = primeBetween(prime1, prime2);
+  primeans -= 2;
 
   $("#primelabel").text(primeans);
 }
