@@ -11,12 +11,14 @@ function lcmcalc() {
 
 function gcdcalc() {
   let gcdans = document.querySelector("#gcdlabel");
-  const [var1, var2, var3] = ["gcd1", "gcd2", "gcd3"].map(
+  const [var1, var2, var3, var4] = ["gcd1", "gcd2", "gcd3", "gcd4"].map(
     (id) => document.getElementById(id).value
   );
 
   if (var3 === null) gcdans = math.gcd(var1, var2);
   else gcdans = math.gcd(var1, var2, var3);
+  if (var4 == null) gcdans = math.gcd(var1, var2, var3);
+  else gcdans = math.gcd(var1, var2, var3, var4);
 
   $("#gcdlabel").text(gcdans);
 }
