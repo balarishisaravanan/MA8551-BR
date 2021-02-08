@@ -163,6 +163,40 @@
           <button class="hbtn hb-fill-middle2" type="submit" onclick="trailingzeroes()">Calculate trailing zeroes (approx)</button>
           <label id="trailing_ans"class="ans">&nbsp;</label>
         </div>
+        <div id="converter">
+          <h2>Base Converter</h2>
+          <input type="number"
+          pattern="\d*"
+          name="deci"
+          id="deci"
+          class="text-box converter"
+          placeholder="DECIMAL"
+          />
+          <input type="number"
+          pattern="\d*"
+          name="bina"
+          id="bina"
+          class="text-box converter"
+          placeholder="BINARY"
+          />
+          <input type="number"
+          pattern="\d*"
+          name="octa"
+          id="octa"
+          class="text-box converter"
+          placeholder="OCTAL"
+          />
+          <input type="text"
+          name="hexa"
+          id="hexa"
+          class="text-box converter"
+          placeholder="HEXA DECIMAL"
+          />
+          <button class="hbtn hb-fill-middle2" type="submit" onclick="convert()">Convert</button>
+          <button class="hbtn hb-fill-middle2" type="submit" onclick="Clear()">clear</button>
+          
+
+        </div>
     </section>
     <hr>
     <!-- Unit3 Ends here -->
