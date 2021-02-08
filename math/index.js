@@ -158,3 +158,68 @@ function divcheck() {
   }
   $("#divisibility").text("Divisible by " + ans);
 }
+
+function convert() {
+  const [decimal, bina, octal, hexa] = [
+    "deci",
+    "bina",
+    "octa",
+    "hexa",
+  ].map((id) => document.getElementById(id));
+  if (
+    decimal.value !== null &&
+    bina.value === "" &&
+    octal.value === "" &&
+    hexa.value === ""
+  ) {
+    val = parseInt(decimal.value, 10);
+    bina.value = val.toString(2);
+    octal.value = val.toString(8);
+    hexa.value = val.toString(16);
+  } else if (
+    decimal.value === "" &&
+    bina.value === "" &&
+    octal.value === "" &&
+    hexa.value !== null
+  ) {
+    val = parseInt(hexa.value, 16);
+    bina.value = val.toString(2);
+    octal.value = val.toString(8);
+    decimal.value = val.toString(10);
+  } else if (
+    decimal.value === "" &&
+    bina.value !== null &&
+    octal.value === "" &&
+    hexa.value === ""
+  ) {
+    val = parseInt(bina.value, 2);
+    console.log(val);
+    decimal.value = val.toString(10);
+    octal.value = val.toString(8);
+    hexa.value = val.toString(16);
+  }
+  if (
+    decimal.value === "" &&
+    bina.value === "" &&
+    octal.value !== null &&
+    hexa.value === ""
+  ) {
+    val = parseInt(octal.value, 8);
+    decimal.value = val.toString(10);
+    bina.value = val.toString(2);
+    hexa.value = val.toString(16);
+  }
+}
+
+function Clear() {
+  const [decimal, bina, octal, hexa] = [
+    "deci",
+    "bina",
+    "octa",
+    "hexa",
+  ].map((id) => document.getElementById(id));
+  decimal.value = "";
+  octal.value = "";
+  hexa.value = "";
+  bina.value = "";
+}
